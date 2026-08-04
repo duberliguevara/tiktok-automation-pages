@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Autorización completada</title>
+<style>body{font-family:sans-serif;max-width:600px;margin:60px auto;padding:0 20px;line-height:1.6;color:#222;text-align:center}
+code{background:#f0f0f0;padding:10px 16px;border-radius:8px;display:inline-block;font-size:14px;word-break:break-all;margin-top:20px;user-select:all}
+</style>
+</head>
+<body>
+<h1>Autorización completada</h1>
+<p>Copia este código y pégalo en la terminal:</p>
+<code id="code">Cargando...</code>
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById('code').textContent = params.get('code') || '(no se encontró código en la URL)';
+</script>
+</body>
+</html>
